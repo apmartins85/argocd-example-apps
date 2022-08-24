@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    backstage.io/kubernetes-id: argo-application
+#   annotations:
+#     backstage.io/kubernetes-id: argo-application
   name: {{ template "helm-guestbook.fullname" . }}
   labels:
     app: {{ template "helm-guestbook.name" . }}
