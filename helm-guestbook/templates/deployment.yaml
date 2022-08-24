@@ -15,6 +15,7 @@ spec:
     matchLabels:
       app: {{ template "helm-guestbook.name" . }}
       release: {{ .Release.Name }}
+      backstage.io/kubernetes-id: argo-application
   template:
     metadata:
       labels:
