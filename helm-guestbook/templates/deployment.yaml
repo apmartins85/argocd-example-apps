@@ -15,12 +15,12 @@ spec:
     matchLabels:
       app: {{ template "helm-guestbook.name" . }}
       release: {{ .Release.Name }}
-      backstage.io/kubernetes-id: argo-application
   template:
     metadata:
       labels:
         app: {{ template "helm-guestbook.name" . }}
         release: {{ .Release.Name }}
+        backstage.io/kubernetes-id: argo-application
     spec:
       containers:
         - name: {{ .Chart.Name }}
