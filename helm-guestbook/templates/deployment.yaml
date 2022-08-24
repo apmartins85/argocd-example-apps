@@ -1,14 +1,13 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    backstage.io/kubernetes-id: argo-application
   name: {{ template "helm-guestbook.fullname" . }}
   labels:
     app: {{ template "helm-guestbook.name" . }}
     chart: {{ template "helm-guestbook.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
+    backstage.io/kubernetes-id: argo-application
 spec:
   replicas: {{ .Values.replicaCount }}
   revisionHistoryLimit: 3
